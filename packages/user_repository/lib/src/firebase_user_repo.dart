@@ -28,14 +28,14 @@ class FirebaseUserRepo implements UserRepository{
             .get()
             .then((value) => MyUser.fromEntity(MyUserEntity.fromDocument(value.data()!)));
       }
-    })
-  };
+    });
+  }
 
 
   @override
   Future<void> signIn(String email, String password) async {
     try{
-      await _firebaseAuth.signInWithEmailAndPassword(email: email, password: password)
+      await _firebaseAuth.signInWithEmailAndPassword(email: email, password: password);
     } catch(e){
       log(e.toString());
       rethrow;

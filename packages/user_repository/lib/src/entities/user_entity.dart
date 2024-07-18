@@ -32,6 +32,6 @@ class MyUserEntity {
         email: doc['email'],
         name: doc['name'],
         hasActiveCart: doc['hasActiveCart']
-    )
+    );
   }
 }
